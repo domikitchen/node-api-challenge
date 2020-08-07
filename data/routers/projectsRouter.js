@@ -114,8 +114,8 @@ function validProjectInputs(req, res, next) {
     if(projectInput === undefined){
         res.status(400).json({ error: "Missing project data" });
     }
-    else if(projectInput.name === undefined || projectInput.description === undefined){
-        res.status(400).json({ error: "Please provide valid name and/or description" });
+    else if(projectInput.name === undefined || projectInput.description === undefined || projectInput.completed === undefined){
+        res.status(400).json({ error: "Please provide valid name, description, and/or completetion status" });
     }
     else{
         next();
