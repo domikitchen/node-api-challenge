@@ -1,3 +1,12 @@
+const server = require('./server.js');
+
+const port = process.env.PORT || 3000;
+server.listen(port, () => {
+    console.log("server listening on port 3000...");
+});
+
+module.exports = server;
+
 /*
 play this: https://www.youtube.com/watch?v=d-diB65scQU
 
